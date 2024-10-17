@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif !important;
+}
+
+.header {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Dosis", sans-serif !important;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.MuiButtonBase-root.MuiButton-root {
+  text-transform: none;
+}
