@@ -1,7 +1,7 @@
 # Challenge
 Implement a full-stack shopping list using the provided mocks. The shopping list can add, edit, and remove shopping items. 
 
-![alt text](image-0.png)
+![alt text](image.png)
 
 ## How to run
 
