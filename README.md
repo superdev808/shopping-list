@@ -9,12 +9,13 @@ Implement a full-stack shopping list using the provided mocks. The shopping list
 
 - Stack
     * Node/Express
-    * Sqlite3/Sequelize (for easier test/run for the reviewers)
+    * Sqlite3/Sequelize (chosen for easy local testing and demonstration purposes for reviewers, but Postgres was recommended in the requirement)
 - Code is in [backend](./backend/) directory
 - `npm install` for the installation
 - `npm start` for running the server
-- Server is running on port [3001](./backend/index.js#L7) by default
-- [db](./backend/db/) directory contains the db file [shopping-list.db](./backend/config/sequelize.js#L5)
+- The server is running on port `3001` by default. You can change this in the [index.js](./backend/index.js#L7) file.
+- The [db](./backend/db/) directory contains the SQLite database file [shopping-list.db](./backend/config/sequelize.js#L5). This file is generated on the first run and contains pre-defined data for testing. You can reset the database by deleting this file and restarting the server.
+
 
 ### Frontend
 
@@ -22,7 +23,7 @@ Implement a full-stack shopping list using the provided mocks. The shopping list
     * React / Context
     * Axios
     * Material UI
-- Code is in [frontend](./frontend/) directory and bootstrapped with [Create React App]
+- Code is in [frontend](./frontend/) directory and bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started)
 - `npm install` for the installation
 - `npm start` for running the server
 - FE is running on port `3000` by default
@@ -31,11 +32,12 @@ Implement a full-stack shopping list using the provided mocks. The shopping list
 ## TODO / Possible improvement with More Time
 
 ### Backend
-- Managed DB with the file in [db](./backend/db/) directory for easier review and demonstration. Consider to configure DB properly and use Postgres as recommended.
+- Managed the database with the file in the [db](./backend/db/) directory for easier review and demonstration. Consider properly configuring the DB to use Postgres as recommended.
 
 ### Frontend
-- Centeralize/Improve styling on FE
-    * Prevent inline styling and use Theme provider
-    * Define variants for consistent/maintainable code
-- Set/Store environment variable properly
-- Handle APIs separately in utils/etc, not inside Context
+- Centralize/Improve styling on the frontend:
+  * Move inline styles into the Theme provider to ensure consistent design across the app.
+  * Define and reuse MUI variants for components like buttons, inputs, etc., to avoid redundancy and improve maintainability.
+- Refactor API handling:
+  * Separate API logic into utility functions (e.g., inside a `services` or `api` folder), so that the Context file focuses on managing state rather than handling HTTP requests.
+- Configure environment variables properly.
