@@ -28,7 +28,7 @@ Implement a full-stack shopping list using the provided mocks. The shopping list
 - FE is running on port `3000` by default
 
 
-## TODD / Possible improvement with More Time
+## TODO / Possible improvement with More Time
 
 ### Backend
 - Managed DB with the file in [db](./backend/db/) directory for easier review and demonstration. Consider to configure DB properly and use Postgres as recommended.
